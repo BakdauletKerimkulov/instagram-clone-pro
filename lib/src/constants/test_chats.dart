@@ -1,0 +1,107 @@
+import 'package:instagram_clone_pro/src/features/direct/domain/chat.dart';
+
+final List<Chat> kTestChats = [
+  Chat(
+    chatId: 'c_001',
+    userIds: ['user1', 'user2'],
+    lastMessageText: 'Hey, how are you?',
+    lastMessageSenderId: 'user2',
+    lastMessageContent: ChatContentType.text,
+    lastMessageTime: DateTime.now().subtract(const Duration(minutes: 5)),
+    unreadCount: 3, // 🔔 Непрочитанный чат
+    createdAt: DateTime.now().subtract(const Duration(days: 2)),
+    updatedAt: DateTime.now().subtract(const Duration(minutes: 5)),
+  ),
+  Chat(
+    chatId: 'c_002',
+    userIds: ['user1', 'user3'],
+    lastMessageText: '📸 Sent you a photo',
+    lastMessageSenderId: 'user3',
+    lastMessageContent: ChatContentType.photo,
+    lastMessageTime: DateTime.now().subtract(const Duration(hours: 1)),
+    unreadCount: 0, // ✅ Прочитанный чат
+    createdAt: DateTime.now().subtract(const Duration(days: 1)),
+    updatedAt: DateTime.now().subtract(const Duration(hours: 1)),
+  ),
+  Chat(
+    chatId: 'c_003',
+    userIds: ['user1', 'user2', 'user3', 'user4'],
+    lastMessageText: '🎥 Check out this clip!',
+    lastMessageSenderId: 'user3',
+    lastMessageContent: ChatContentType.video,
+    lastMessageTime: DateTime.now().subtract(const Duration(hours: 2)),
+    unreadCount: 15, // 🚀 Групповой чат с большим количеством непрочитанных
+    isGroup: true,
+    groupName: 'Weekend Crew',
+    groupImageUrl:
+        'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=200',
+    createdAt: DateTime.now().subtract(const Duration(days: 3)),
+    updatedAt: DateTime.now().subtract(const Duration(hours: 2)),
+  ),
+  Chat(
+    chatId: 'c_004',
+    userIds: ['user1', 'user5'],
+    lastMessageText: 'See you tomorrow!',
+    lastMessageSenderId: 'user1',
+    lastMessageContent: ChatContentType.text,
+    lastMessageTime: DateTime.now().subtract(const Duration(hours: 10)),
+    unreadCount: 0,
+    createdAt: DateTime.now().subtract(const Duration(days: 4)),
+    updatedAt: DateTime.now().subtract(const Duration(hours: 10)),
+  ),
+  Chat(
+    chatId: 'c_005',
+    userIds: ['user1', 'user6'],
+    lastMessageText: 'Just one new message',
+    lastMessageSenderId: 'user6',
+    lastMessageContent: ChatContentType.photo,
+    lastMessageTime: DateTime.now().subtract(const Duration(minutes: 30)),
+    unreadCount: 1, // 🔔 Один непрочитанный
+    createdAt: DateTime.now().subtract(const Duration(days: 1)),
+    updatedAt: DateTime.now().subtract(const Duration(minutes: 30)),
+  ),
+  Chat(
+    chatId: 'c_006',
+    userIds: ['user1', 'user7'],
+    lastMessageText: 'System update completed.',
+    lastMessageSenderId: 'user7',
+    lastMessageContent: ChatContentType.text,
+    lastMessageTime: DateTime.now().subtract(const Duration(days: 1)),
+    unreadCount: 0, // Чат-бот или сервис
+    createdAt: DateTime.now().subtract(const Duration(days: 5)),
+    updatedAt: DateTime.now().subtract(const Duration(days: 1)),
+  ),
+  Chat(
+    chatId: 'c_007',
+    userIds: ['user1', 'user_current'],
+    lastMessageText: '🎥 Reels shared with you!',
+    lastMessageSenderId: 'user_current',
+    lastMessageContent: ChatContentType.video,
+    lastMessageTime: DateTime.now().subtract(const Duration(hours: 6)),
+    unreadCount: 0,
+    createdAt: DateTime.now().subtract(const Duration(days: 2)),
+    updatedAt: DateTime.now().subtract(const Duration(hours: 6)),
+  ),
+  Chat(
+    chatId: 'c_008',
+    userIds: ['user1', 'user8'],
+    lastMessageText: 'Good night 🌙',
+    lastMessageSenderId: 'user8',
+    lastMessageContent: ChatContentType.text,
+    lastMessageTime: DateTime.now().subtract(const Duration(hours: 12)),
+    unreadCount: 0,
+    createdAt: DateTime.now().subtract(const Duration(days: 2)),
+    updatedAt: DateTime.now().subtract(const Duration(hours: 12)),
+  ),
+  Chat(
+    chatId: 'c_009',
+    userIds: ['user1', 'user9'],
+    lastMessageText: 'Sent 7 new photos!',
+    lastMessageSenderId: 'user9',
+    lastMessageContent: ChatContentType.photo,
+    lastMessageTime: DateTime.now().subtract(const Duration(minutes: 45)),
+    unreadCount: 7, // 🔔 Непрочитанный чат
+    createdAt: DateTime.now().subtract(const Duration(days: 2)),
+    updatedAt: DateTime.now().subtract(const Duration(minutes: 45)),
+  ),
+];
